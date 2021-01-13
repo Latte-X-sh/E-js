@@ -1,0 +1,189 @@
+<html>
+    <head> 
+        <title>Introduction to Javascript</title>
+    </head>
+    <body>
+        <script>
+//the menu code function 
+    function menu(){
+        let choice = eval(prompt("\tEloquent Javascript code works \n 1:Section 1(1-5) \n 2:Section 2(6-10) \n 3:Section 3(11-end)\n 4:Exercises \n 5:End\n"));
+        switch (choice){
+            case 1:
+                    let choice1 = eval(prompt("\tChoose the code you want to view\n 1:Code 1 \n 2:Code 2 \n 3:Code 3 \n"));
+                    switch(choice1){
+                        case 1:
+                            alert("Open your console");
+                            example0();
+                            menu();
+                            break;
+                        case 2:
+                            alert("Check your screen,Random numbers are generated using a for loop whose limit is 11 !");
+                            example1();
+                            menu();
+                            break;
+                        case 3:
+                      alert("Open your console!ODD & Even numbers generated using recurssion");
+                            example2();
+                            menu();
+                            break;
+                        default:
+                        if (choice1 == null){
+                                alert("you haven't keyed in any value");
+                            }else{
+                            alert("You've exeeceded the limit");
+                            }
+                            menu();
+                            break;
+                         }
+                         break;
+                case 2:
+                let choice2 = eval(prompt("\tChoose the code you want to view\n 1:Code 1 \n 2:Code 2 \n 3:Code 3 \n"));
+                    switch(choice2){
+                        case 1:
+                            //input your code
+                            menu();
+                            break;
+                        case 2:
+                             //input your code
+                            menu();
+                            break;
+                        case 3:
+                            //input your code
+                            menu();
+                            break;
+                        default:
+                        if (choice2 == null){
+                                alert("you haven't keyed in any value");
+                            }else{
+                            alert("You've exeeceded the limit");
+                            }
+                            menu();
+                            break;
+                    }
+                    break;
+                    case 3:
+                    let choice3 = eval(prompt("\tChoose the code you want to view\n 1:Code 1 \n 2:Code 2 \n 3:Code 3 \n"));
+                    switch(choice3){
+                        case 1:
+                            //input your code
+                            menu();
+                            break;
+                        case 2:
+                            //input your code
+                            menu();
+                            break;
+                        case 3:
+                            //input your code
+                            menu();
+                            break;
+                        default:
+                            if (choice3 == null){
+                                alert("you haven't keyed in any value");
+                            }else{
+                            alert("You've exeeceded the limit");
+                            }
+                            menu();
+                            break;
+                    }    
+                        break;
+                    case 4:
+                    let choice4 = eval(prompt("\tChoose the Exercise you want to view\n 1:Exercise 1 \n 2:Exercise 2 \n 3:Exercise 3 \n"));
+                    switch(choice4){
+                        case 1:
+                            //input your code
+                            menu();
+                            break;
+                        case 2:
+                            //input your code
+                            menu();
+                            break;
+                        case 3:
+                            //input your code
+                            menu();
+                            break;
+                        default:
+                        if (choice4 == null){
+                                alert("you haven't keyed in any value");
+                            }else{
+                            alert("You've exeeceded the limit");
+                            }
+                            menu();
+                            break;
+                    }
+                            break;
+                    case 5:
+                        //terminates the code.
+                            break;
+                    default:
+                    if (choice == null){
+                                alert("you haven't keyed in any value");
+                            }else{
+                                prompt("The value choosen is out of range,so press Enter key or ESC key we go back to the start!",choice);
+                            }
+                     
+                        menu();
+                        break;
+        }
+    }
+//All the code working placed in functions for neatness.
+//section 1
+    function example0(){
+        document.write("Hello world,check the console for type conversions.");
+        console.log(7 * null);
+        console.log("5" + 1);
+        console.log(5+3);
+        console.log("5"-1);
+        console.log("five" * 2);
+        console.log(false == 0);
+    }       
+    function example1(){
+        let total = 0;
+        for (let count = 1; count < 11; count++) {
+            total = total + count;  
+            document.write(total); 
+            document.write('\n');   
+        }  
+        document.write("<br>");
+    }
+    function example2(){//describing combination (recurssion) as depicted in the book
+        let n = eval(prompt("Press one for even & odd and two for recurssion")); 
+        switch (n) {
+            case 1:
+                let result = eval(prompt("Enter a value"));
+                if( result%2== 0){
+                console.log( result,"even");
+                }else{
+                    console.log(result,"odd");
+                }
+                break;
+            case 2://determing odd using recursion.
+            let z= eval(prompt("Enter a value"));
+                function re(z){
+                    if (z%2 != 0 ){
+                      console.log(z,"odd");
+                }else{
+                    re(z+1);
+                }
+            }
+                re(z);
+                break;
+                     default:
+                     console.log("beyond parameter");
+                     break;
+        } 
+       }
+//exercises
+function triangleloop(x){
+    let x =eval(prompt("Enter the number of rows"));
+    for (let count=0; count < x;count++){
+        console.log("#");
+        
+    }
+
+}
+//body of the program
+      menu();
+
+        </script>
+    </body>      
+</html>

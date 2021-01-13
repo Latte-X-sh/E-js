@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code test</title>
+</head>
+<body>
+    <script>
+let x = eval(prompt("Enter a value"))
+/*
+for(let count = 0;count < x; count ++){
+let string = count;
+if (count === 0){
+document.write(string);
+document.write("<br>");
+}else{  
+    document.write(string);
+    document.write("<br>");
+}
+}*/
+/* Trial 1
+for (let count = 0 ;count < x; count ++){
+    for(let string = 0; string < count;string ++){
+        document.write("#");
+        
+    }
+    document.write(count);
+    document.write("<br>");
+}*/
+//Trial 2
+let count = 0;
+while (count < x) {
+    
+document.write("#");
+document.write("<br>");
+count = count + 1;
+    
+}
+
+    </script>
+</body>
+</html>
