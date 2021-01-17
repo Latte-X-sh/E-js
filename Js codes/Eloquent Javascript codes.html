@@ -95,7 +95,7 @@
                             break;
                         case 2:
                             //input your code
-                            menu();
+                            fizzbuzz();
                             break;
                         case 3:
                             //input your code
@@ -173,14 +173,54 @@
         } 
        }
 //exercises
+    //exercise 1 
     function triangleloop(){
-    let x =eval(prompt("Enter the number of rows"));
-    for (let count=0; count < x;count++){
-       document.write("#");
-        
-    }
-
+        let y=eval(prompt("1.normal order 2.reverse order"));
+        switch(y){
+            case 1:
+           x = eval(prompt("Enter a value"));
+             for (let count = 1 ;count <= x; count ++){
+                for(let  string = 0; string < count ;string ++){
+                    document.write("#");
+                                }
+             document.write(count);
+             document.write("<br>");
 }
+                break;
+            case 2:
+            x = eval(prompt("Enter a value"));
+             for (let count = 0 ;count < x; count ++){
+                for(let  string = count; string < x;string ++){
+                    document.write("#");
+                                }
+             document.write(count);
+             document.write("<br>");
+}
+                break;
+            default:
+                document.write("No option");
+                menu();
+                break;
+        }
+       
+}
+    //exercise 2
+    function fizzbuzz(){
+        for(let y = 0; y <= 100; y++){
+        if(y%3 == 0 && y%5 == 0){
+        console.log(y,"FizzBuzz");
+        }else{
+         if( y%3 == 0 ){
+            console.log(y,"Fizz");
+            }if(y%5 == 0){
+            console.log(y,"Buzz");
+                         }
+            }
+                                        }
+    }
+    //exercise 3
+    
+
 //body of the program
       menu();
 
