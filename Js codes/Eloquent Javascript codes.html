@@ -86,7 +86,7 @@
                             break;
                     }    
                         break;
-                    case 4:
+            case 4:
                     let choice4 = eval(prompt("\tChoose the Exercise you want to view\n 1:Exercise 1 \n 2:Exercise 2 \n 3:Exercise 3 \n"));
                     switch(choice4){
                         case 1:
@@ -99,7 +99,7 @@
                             break;
                         case 3:
                             //input your code
-                            menu();
+                            chessboard();
                             break;
                         default:
                         if (choice4 == null){
@@ -111,10 +111,10 @@
                             break;
                     }
                             break;
-                    case 5:
+            case 5:
                         //terminates the code.
                             break;
-                    default:
+            default:
                     if (choice == null){
                                 alert("you haven't keyed in any value");
                             }else{
@@ -172,7 +172,7 @@
                      break;
         } 
        }
-//exercises
+//Exercises Part 1
     //exercise 1 
     function triangleloop(){
         let y=eval(prompt("1.normal order 2.reverse order"));
@@ -206,6 +206,7 @@
 }
     //exercise 2
     function fizzbuzz(){
+        document.write("Open you console and view the result")
         for(let y = 0; y <= 100; y++){
         if(y%3 == 0 && y%5 == 0){
         console.log(y,"FizzBuzz");
@@ -219,8 +220,34 @@
                                         }
     }
     //exercise 3
-    
+    function chessboard(){
+        x = eval(prompt("Enter the value of x"));
 
+         for (let count = 0 ;count < x; count ++){
+            for(var  string = 0; string < x;string ++){
+//count and string variables to change
+                if(count % 2 == 0){
+                    if(string % 2 != 0){
+                    document.write("#");
+                    }else{
+//introduce &nbsp -non breaking space and this tells the browser to create a space between two items even if the browsers intends to wrap them.
+                        document.write("&nbsp;");
+                    }
+                }else{
+                    if(string % 2 == 0){
+                    document.write("#");
+                    }else{
+                        document.write("&nbsp;");
+                    }
+                }
+            }
+           // document.write(count);
+            document.write("<br>");
+        }
+        document.write("<br>");
+        document.write("End of Chapter 1&2 exercises and what is key is how to manipulate your for loops using the limits.It also checked whether you understand the use of divisibility so as to manipulate your code result.")
+    }
+//Exercises Part 2
 //body of the program
       menu();
 
