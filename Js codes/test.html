@@ -30,32 +30,6 @@ for (let count = 0 ;count < x; count ++){
     document.write(count);
     document.write("<br>");
 }*/
-//Trial 1 -chessboard
-
-for (let count = 0 ;count < x; count ++){
-    for(var  string = 0; string < x;string ++){
-        //count and string variables to change
-        if(count % 2 == 0){
-             if(string % 2 != 0){
-             document.write("#");
-             }else{
-                 //introduce &nbsp -non breaking space and this tells the browser to create a space between two items even if the browsers intends to wrap them.
-                 document.write("&nbsp;");
-             }
-        }else{
-            if(string % 2 == 0){
-             document.write("#");
-             }else{
-                 document.write("&nbsp;");
-             }
-        }
-        
-     
-    }
-    
-    document.write(count);
-    document.write("<br>");
-}
 //Trial 2
 /*
 let count = 0;
@@ -80,7 +54,30 @@ for(let y = 0; y <= x; y++){
 
     }
 }*/
-//chessboard
+//Trial 1 -chessboard
+/*
+for (let count = 0 ;count < x; count ++){
+    for(var  string = 0; string < x;string ++){
+        //count and string variables to change
+        if(count % 2 == 0){
+             if(string % 2 != 0){
+             document.write("#");
+             }else{
+                 //introduce &nbsp -non breaking space and this tells the browser to create a space between two items even if the browsers intends to wrap them.
+                 document.write("&nbsp;");
+             }
+        }else{
+            if(string % 2 == 0){
+             document.write("#");
+             }else{
+                 document.write("&nbsp;");
+             }
+        }
+    }
+    document.write(count);
+    document.write("<br>");
+}*/
+
 
     </script>
 </body>

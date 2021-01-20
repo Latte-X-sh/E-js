@@ -9,7 +9,7 @@
         let choice = eval(prompt("\tEloquent Javascript code works \n 1:Section 1(1-5) \n 2:Section 2(6-10) \n 3:Section 3(11-end)\n 4:Exercises \n 5:End\n"));
         switch (choice){
             case 1:
-                    let choice1 = eval(prompt("\tChoose the code you want to view\n 1:Code 1 \n 2:Code 2 \n 3:Code 3 \n"));
+                    let choice1 = eval(prompt("\tChoose the code you want to view\n 1:Code 1 \n 2:Code 2 \n 3:Code 3 \n 4:Code 4 \n"));
                     switch(choice1){
                         case 1:
                             alert("Open your console");
@@ -26,6 +26,12 @@
                             example2();
                             menu();
                             break;
+                        case 4:
+                      alert("Functions is part of the core of javascript and we would want to tackle key concpets,Closures,Recursions & Growing Functions");
+                      alert("Closures-We have two functions where the bindings of the outer function is visibile(scope) and usable to inner functions but not the vice versar.Recursion -Where the function is called again for execution.somehow repetative or redundant.GrowingFunctions-It entails writing functions that is able to withstand and serve alot of problems as seen in the examples.For more info,https://medium.com/@kaledoux/javascript-exercises-scope-hoisting-and-closures-423893501195");
+                      alert("Open the console and view the source code on line 180 to 215 under the debug tab");
+                      functions0(); //concept of growing functions
+                      break;
                         default:
                         if (choice1 == null){
                                 alert("you haven't keyed in any value");
@@ -171,8 +177,43 @@
                      console.log("beyond parameter");
                      break;
         } 
-       }
-//Exercises Part 1
+    }
+    //function examples
+    function functions0(){ 
+    //Growing function concept.Function code that is able to accomodate growing code functionality.
+    //growing function not improved
+        function printFarmInventory(cows, chickens) {
+                    let cowString = String(cows); 
+                            while (cowString.length < 3) {
+                            cowString = "0" + cowString;
+                            }
+                            document.write(`${cowString} Cows <br>`);
+                    let chickenString = String(chickens);
+                            while (chickenString.length < 3) {
+                            chickenString = "0" + chickenString;
+                            }
+                            document.write(`${chickenString} Chickens <br>`);
+                 }
+            // growing function improved (introduce width and number)
+        function zeroPad(number, width){
+                    let numString = String(number); //changes line code to a string
+                    while(numString.length <= width){
+                        numString = "0" + numString; //string concatenation           
+                    }
+                    return numString; //result to be returned
+                 }
+        function printInventory(cows,dogs,sheep){
+                    document.write(`${zeroPad(11,4)} Cows <br> `);
+                    document.write(`${zeroPad(41,4)} Dogs <br>`);
+                    document.write(`${zeroPad(1,4)} Sheep <br>`);
+                }             
+       printFarmInventory(3,11); //function call with parameters
+       printInventory(); //function call
+    }
+    function function1(){
+
+    }   
+    //Exercises Part 1
     //exercise 1 
     function triangleloop(){
         let y=eval(prompt("1.normal order 2.reverse order"));
@@ -248,6 +289,8 @@
         document.write("End of Chapter 1&2 exercises and what is key is how to manipulate your for loops using the limits.It also checked whether you understand the use of divisibility so as to manipulate your code result.")
     }
 //Exercises Part 2
+    //functions1    
+
 //body of the program
       menu();
 
