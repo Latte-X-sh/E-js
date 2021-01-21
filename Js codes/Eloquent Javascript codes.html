@@ -8,7 +8,7 @@
     function menu(){
         let choice = eval(prompt("\tEloquent Javascript code works \n 1:Section 1(1-5) \n 2:Section 2(6-10) \n 3:Section 3(11-end)\n 4:Exercises \n 5:End\n"));
         switch (choice){
-            case 1:
+            case 1://section 1-5
                     let choice1 = eval(prompt("\tChoose the code you want to view\n 1:Code 1 \n 2:Code 2 \n 3:Code 3 \n 4:Code 4 \n"));
                     switch(choice1){
                         case 1:
@@ -62,7 +62,7 @@
                             break;
                          }
                          break;
-            case 2:
+            case 2://section 6-10
                 let choice2 = eval(prompt("\tChoose the code you want to view\n 1:Code 1 \n 2:Code 2 \n 3:Code 3 \n"));
                     switch(choice2){
                         case 1:
@@ -87,7 +87,7 @@
                             break;
                     }
                     break;
-            case 3:
+            case 3://section 11-end 
                     let choice3 = eval(prompt("\tChoose the code you want to view\n 1:Code 1 \n 2:Code 2 \n 3:Code 3 \n"));
                     switch(choice3){
                         case 1:
@@ -112,8 +112,8 @@
                             break;
                     }    
                         break;
-            case 4:
-                    let choice4 = eval(prompt("\tChoose the Exercise you want to view\n 1:Exercise 1 \n 2:Exercise 2 \n 3:Exercise 3 \n"));
+            case 4://exercises
+                    let choice4 = eval(prompt("\tChoose the Exercise you want to view\n 1:Exercise 1 \n 2:Exercise 2 \n 3:Exercise 3\n 4:Exercise 4 \n 5:Exercise 5\n 6:Exercise 6 \n"));
                     switch(choice4){
                         case 1:
                             //input your code
@@ -127,6 +127,13 @@
                             //input your code
                             chessboard();
                             break;
+                        case 4:
+                            minimum();
+                            break;
+                        case 5:
+                            break;
+                        case 6:
+                             break; 
                         default:
                         if (choice4 == null){
                                 alert("you haven't keyed in any value");
@@ -329,8 +336,27 @@
                                 document.write("End of Chapter 1&2 exercises and what is key is how to manipulate your for loops using the limits.It also checked whether you understand the use of divisibility so as to manipulate your code result.")
                             }
          //Exercises Part 2
-         //functions
-            
+         //functions 
+//exercise minimum
+function minimum(){
+alert("We are going to compare two numbers so  as to get the minimmum");
+x=eval(prompt("Enter a value x"));
+y=eval(prompt("Enter a value y"));
+document.write(Math.min(x,y));
+  }
+//exercise recursion
+function recursion(){
+let x = eval(prompt("Enter a value"));
+    function div(x){
+if(x%2 == 0){
+Boolean 
+}if(x%2 ==1){
+Boolean 
+}else{
+    return div(x-2) 
+}
+    }
+} 
 
 //body of the program
       menu();

@@ -93,6 +93,17 @@ for (let count = 0 ;count < x; count ++){
        document.write(power(base,exponent)); //function call within the main function.
     }   
 */
+    function div(x){
+if(x%2 == 0){
+return true;
+}if(x%2 ==1){
+return false;
+}else{
+    return x ,div(x-2); 
+}
+    }
+document.write(div(x));
+ 
     </script>
 </body>
 </html>
