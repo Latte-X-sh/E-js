@@ -7,6 +7,7 @@
 </head>
 <body>
     <script>
+//function1();
 let x = eval(prompt("Enter a value"))
 /*
 for(let count = 0;count < x; count ++){
@@ -77,8 +78,21 @@ for (let count = 0 ;count < x; count ++){
     document.write(count);
     document.write("<br>");
 }*/
-
-
+//functions
+/*function function1(){
+        let base=eval(prompt("Enter the base value for your program"));
+        let exponent=eval(prompt("Enter the Exponent value for your program"));
+        //recurssion example as got from the book
+        function power(base,exponent){
+            if(exponent == 0){
+                return (1);
+            }else{ //recurssion occuring in this particular line of code
+                return base * power(base,exponent -1 );
+            }
+        }
+       document.write(power(base,exponent)); //function call within the main function.
+    }   
+*/
     </script>
 </body>
 </html>

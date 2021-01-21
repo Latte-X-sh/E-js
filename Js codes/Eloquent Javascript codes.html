@@ -27,10 +27,30 @@
                             menu();
                             break;
                         case 4:
-                      alert("Functions is part of the core of javascript and we would want to tackle key concpets,Closures,Recursions & Growing Functions");
-                      alert("Closures-We have two functions where the bindings of the outer function is visibile(scope) and usable to inner functions but not the vice versar.Recursion -Where the function is called again for execution.somehow repetative or redundant.GrowingFunctions-It entails writing functions that is able to withstand and serve alot of problems as seen in the examples.For more info,https://medium.com/@kaledoux/javascript-exercises-scope-hoisting-and-closures-423893501195");
-                      alert("Open the console and view the source code on line 180 to 215 under the debug tab");
-                      functions0(); //concept of growing functions
+                        alert("Functions are part of the core of javascript and we would want to tackle key concpets,Closures,Recursions & Growing Functions");
+                        alert("For more info,https://medium.com/@kaledoux/javascript-exercises-scope-hoisting-and-closures-423893501195");
+                        let zulu=eval(prompt("\tChoose the code you want to view \n 1.GrowingFunction \n 2.Recurrsion \n 3.Closure"));
+                        switch(zulu){
+                            case 1:
+                            alert("GrowingFunctions-It entails writing functions that is able to withstand and serve alot of problems as seen in the example.");
+                            alert("Open the console and view the source code on line 180 to 215 under the debug tab");
+                            function0(); //concept of growing functions
+                                break;
+                            case 2:
+                            alert("Recursion -Where the function is called again for execution.somehow repetative or redundant.");
+                            alert("Open the console and view the source code on line 180 to 215 under the debug tab");
+                            function1(); //concept of recurrsion
+                                break;
+                            case 3:
+                            alert("Closures-We have two functions where the bindings of the outer function is visibile(scope) and usable to inner functions but not the vice versar.");
+                            alert("Open the console and view the source code on line 180 to 215 under the debug tab");
+                            function2();
+                                break;
+                            default:
+                            alert("Wrong input.");
+                            menu();
+                                break;
+                        }
                       break;
                         default:
                         if (choice1 == null){
@@ -132,67 +152,67 @@
         }
     }
 //All the code working placed in functions for neatness.
-//section 1
-    function example0(){
-        document.write("Hello world,check the console for type conversions.");
-        console.log(7 * null);
-        console.log("5" + 1);
-        console.log(5+3);
-        console.log("5"-1);
-        console.log("five" * 2);
-        console.log(false == 0);
-    }       
-    function example1(){
-        let total = 0;
-        for (let count = 1; count < 11; count++) {
-            total = total + count;  
-            document.write(total); 
-            document.write('\n');   
-        }  
-        document.write("<br>");
-    }
-    function example2(){//describing combination (recurssion) as depicted in the book
-        let n = eval(prompt("Press one for even & odd and two for recurssion")); 
-        switch (n) {
-            case 1:
-                let result = eval(prompt("Enter a value"));
-                if( result%2== 0){
-                console.log( result,"even");
-                }else{
-                    console.log(result,"odd");
+                //section 1
+                function example0(){
+                    document.write("Hello world,check the console for type conversions.");
+                    console.log(7 * null);
+                    console.log("5" + 1);
+                    console.log(5+3);
+                    console.log("5"-1);
+                    console.log("five" * 2);
+                    console.log(false == 0);
+                }       
+                function example1(){
+                    let total = 0;
+                    for (let count = 1; count < 11; count++) {
+                        total = total + count;  
+                        document.write(total); 
+                        document.write('\n');   
+                    }  
+                    document.write("<br>");
                 }
-                break;
-            case 2://determing odd using recursion.
-            let z= eval(prompt("Enter a value"));
-                function re(z){
-                    if (z%2 != 0 ){
-                      console.log(z,"odd");
-                }else{
-                    re(z+1);
+                function example2(){//describing combination (recurssion) as depicted in the book
+                    let n = eval(prompt("Press one for even & odd and two for recurssion")); 
+                    switch (n) {
+                        case 1:
+                            let result = eval(prompt("Enter a value"));
+                            if( result%2== 0){
+                            console.log( result,"even");
+                            }else{
+                                console.log(result,"odd");
+                            }
+                            break;
+                        case 2://determing odd using recursion.
+                        let z= eval(prompt("Enter a value"));
+                            function re(z){
+                                if (z%2 != 0 ){
+                                console.log(z,"odd");
+                            }else{
+                                re(z+1);
+                            }
+                        }
+                            re(z);
+                            break;
+                                default:
+                                console.log("beyond parameter");
+                                break;
+                    } 
                 }
-            }
-                re(z);
-                break;
-                     default:
-                     console.log("beyond parameter");
-                     break;
-        } 
-    }
-    //function examples
-    function functions0(){ 
-    //Growing function concept.Function code that is able to accomodate growing code functionality.
-    //growing function not improved
+        //function examples
+        function function0(){//GrowingFunctions 
+        //Growing function concept.Function code that is able to accomodate growing code functionality.
+        //growing function not improved
         function printFarmInventory(cows, chickens) {
                     let cowString = String(cows); 
-                            while (cowString.length < 3) {
-                            cowString = "0" + cowString;
-                            }
-                            document.write(`${cowString} Cows <br>`);
+                        while (cowString.length < 3) {
+                        cowString = "0" + cowString;
+                        }
+                        document.write(`${cowString} Cows <br>`);
                     let chickenString = String(chickens);
-                            while (chickenString.length < 3) {
-                            chickenString = "0" + chickenString;
-                            }
-                            document.write(`${chickenString} Chickens <br>`);
+                        while (chickenString.length < 3) {
+                        chickenString = "0" + chickenString;
+                        }
+                        document.write(`${chickenString} Chickens <br>`);
                  }
             // growing function improved (introduce width and number)
         function zeroPad(number, width){
@@ -207,89 +227,110 @@
                     document.write(`${zeroPad(41,4)} Dogs <br>`);
                     document.write(`${zeroPad(1,4)} Sheep <br>`);
                 }             
-       printFarmInventory(3,11); //function call with parameters
-       printInventory(); //function call
+        printFarmInventory(3,11); //function call with parameters
+        printInventory(); //function call
     }
-    function function1(){
+        function function1(){//Recurssion
+                    let base=eval(prompt("Enter the base value for your program"));
+                    let exponent=eval(prompt("Enter the Exponent value for your program"));
+                    //recurssion example as got from the book
+                    //note how closure concept has been used.
+                    function power(base,exponent){
+                        if(exponent == 0){
+                            return (1);
+                        }else{ //recurssion occuring in this particular line of code
+                            return base * power(base,exponent -1 );
+                        }
+                    }
+                document.write(power(base,exponent)); //function call within the main function.
+         }
+        function function2(){//Closure
+            let x = eval(prompt("Enter x value"));
+            let y = eval(prompt("Enter y value"));
+            //use of arrow functions
+            function multiplier(factor) {
+                return number => number * factor;}
+            let twice = multiplier(x);
+            document.write(twice(y));
+         }
+                        //Exercises Part 1
+                            //exercise 1 
+                            function triangleloop(){
+                                let y=eval(prompt("1.normal order 2.reverse order"));
+                                switch(y){
+                                    case 1:
+                                x = eval(prompt("Enter a value"));
+                                    for (let count = 1 ;count <= x; count ++){
+                                        for(let  string = 0; string < count ;string ++){
+                                            document.write("#");
+                                                        }
+                                    document.write(count);
+                                    document.write("<br>");
+                        }
+                                        break;
+                                    case 2:
+                                    x = eval(prompt("Enter a value"));
+                                    for (let count = 0 ;count < x; count ++){
+                                        for(let  string = count; string < x;string ++){
+                                            document.write("#");
+                                                        }
+                                    document.write(count);
+                                    document.write("<br>");
+                        }
+                                        break;
+                                    default:
+                                        document.write("No option");
+                                        menu();
+                                        break;
+                                }
+                            
+                        }
+                            //exercise 2
+                            function fizzbuzz(){
+                                document.write("Open you console and view the result")
+                                for(let y = 0; y <= 100; y++){
+                                if(y%3 == 0 && y%5 == 0){
+                                console.log(y,"FizzBuzz");
+                                }else{
+                                if( y%3 == 0 ){
+                                    console.log(y,"Fizz");
+                                    }if(y%5 == 0){
+                                    console.log(y,"Buzz");
+                                                }
+                                    }
+                                                                }
+                            }
+                            //exercise 3
+                            function chessboard(){
+                                x = eval(prompt("Enter the value of x"));
 
-    }   
-    //Exercises Part 1
-    //exercise 1 
-    function triangleloop(){
-        let y=eval(prompt("1.normal order 2.reverse order"));
-        switch(y){
-            case 1:
-           x = eval(prompt("Enter a value"));
-             for (let count = 1 ;count <= x; count ++){
-                for(let  string = 0; string < count ;string ++){
-                    document.write("#");
-                                }
-             document.write(count);
-             document.write("<br>");
-}
-                break;
-            case 2:
-            x = eval(prompt("Enter a value"));
-             for (let count = 0 ;count < x; count ++){
-                for(let  string = count; string < x;string ++){
-                    document.write("#");
-                                }
-             document.write(count);
-             document.write("<br>");
-}
-                break;
-            default:
-                document.write("No option");
-                menu();
-                break;
-        }
-       
-}
-    //exercise 2
-    function fizzbuzz(){
-        document.write("Open you console and view the result")
-        for(let y = 0; y <= 100; y++){
-        if(y%3 == 0 && y%5 == 0){
-        console.log(y,"FizzBuzz");
-        }else{
-         if( y%3 == 0 ){
-            console.log(y,"Fizz");
-            }if(y%5 == 0){
-            console.log(y,"Buzz");
-                         }
-            }
+                                for (let count = 0 ;count < x; count ++){
+                                    for(var  string = 0; string < x;string ++){
+                        //count and string variables to change
+                                        if(count % 2 == 0){
+                                            if(string % 2 != 0){
+                                            document.write("#");
+                                            }else{
+                        //introduce &nbsp -non breaking space and this tells the browser to create a space between two items even if the browsers intends to wrap them.
+                                                document.write("&nbsp;");
+                                            }
+                                        }else{
+                                            if(string % 2 == 0){
+                                            document.write("#");
+                                            }else{
+                                                document.write("&nbsp;");
+                                            }
                                         }
-    }
-    //exercise 3
-    function chessboard(){
-        x = eval(prompt("Enter the value of x"));
-
-         for (let count = 0 ;count < x; count ++){
-            for(var  string = 0; string < x;string ++){
-//count and string variables to change
-                if(count % 2 == 0){
-                    if(string % 2 != 0){
-                    document.write("#");
-                    }else{
-//introduce &nbsp -non breaking space and this tells the browser to create a space between two items even if the browsers intends to wrap them.
-                        document.write("&nbsp;");
-                    }
-                }else{
-                    if(string % 2 == 0){
-                    document.write("#");
-                    }else{
-                        document.write("&nbsp;");
-                    }
-                }
-            }
-           // document.write(count);
-            document.write("<br>");
-        }
-        document.write("<br>");
-        document.write("End of Chapter 1&2 exercises and what is key is how to manipulate your for loops using the limits.It also checked whether you understand the use of divisibility so as to manipulate your code result.")
-    }
-//Exercises Part 2
-    //functions1    
+                                    }
+                                // document.write(count);
+                                    document.write("<br>");
+                                }
+                                document.write("<br>");
+                                document.write("End of Chapter 1&2 exercises and what is key is how to manipulate your for loops using the limits.It also checked whether you understand the use of divisibility so as to manipulate your code result.")
+                            }
+         //Exercises Part 2
+         //functions
+            
 
 //body of the program
       menu();
