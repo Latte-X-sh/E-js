@@ -8,7 +8,7 @@
 <body>
     <script>
 //function1();
-let x = eval(prompt("Enter a value"))
+//let x = eval(prompt("Enter a value"))
 /*
 for(let count = 0;count < x; count ++){
 let string = count;
@@ -93,17 +93,105 @@ for (let count = 0 ;count < x; count ++){
        document.write(power(base,exponent)); //function call within the main function.
     }   
 */
-    function div(x){
+/*function div(x){//trial 1
 if(x%2 == 0){
-return true;
-}if(x%2 ==1){
-return false;
+return true,("even");
+}if(x%2 == 1){
+return false,("not even");
 }else{
-    return x ,div(x-2); 
+    return div(x-2); 
 }
+}*/
+/*function div(x){//trial 2
+if(x == 0){
+    return "even";
+}if(x == 1){
+    return "odd";
+}else{
+   return div(x-2);
+}
+}*/
+/*function div(x){//trial 3
+if(x == 0){
+    return "even";
+}if(x == 1){
+    return "odd";
+}if(x < 0 || x > 1){
+   return div(x-2);
+}
+}*/
+//document.write(div(x));
+/*not working code
+function countBs(){
+let wordy= prompt('Enter a string with b');
+   
+    for(let x =0;x < wordy.length;x++){
+        if(wordy['B'] == true || wordy['b'] == true){
+            let count = 0;
+            count = count+1;
+            return count;
+        }
+        
     }
-document.write(div(x));
- 
+}
+console.log(countBs());*/
+ /*code that has helped me understand how count works based on scope and hoisting
+ for(let x = 0 ;x < wordy.length;x++){
+
+count = count + 1;
+}
+return count;*/
+//program to count only Bs.Concept on growing functions
+/*
+function countBs(){
+let wordy= prompt('Enter a string with b');
+let count = 0;
+let x = 0;
+function div(x){
+let z = wordy.indexOf('B',x);
+    if(z >= 0){
+    x=z+1;
+    count = count + 1;
+    //console.log(z);
+    div(x);//recurssive function so as to find the total number of Bs
+    }else{
+        console.log("Computing,Waiting for results.");
+    }
+}
+setTimeout(function(){
+    console.log(`The number of b(s) in the text is ${count}`);
+},3000);
+div(x);
+
+}
+countBs();*/
+/*
+function countChar(){
+let wordy= prompt('Enter a string ');
+let char =prompt("Enter one alphabetical character you want to count in the line/sentence");
+let count = 0;
+let x = 0;
+function div(x){
+let z = wordy.indexOf(char,x);
+    if(z >= 0){
+    x=z+1;
+    count = count + 1;
+    //console.log(z);
+    div(x);//recurssive function so as to find the total number of Bs
+    }else{
+        console.log("Computing,Waiting for results.");
+    }
+}
+setTimeout(function(){
+    console.log(`The number of ${char}(s) in the text is ${count}`);
+},3000);
+div(x);
+
+}
+countChar();
+ */
+ let wordy= prompt('Enter a string ');
+ console.log(wordy.substring(3,));
     </script>
 </body>
 </html>

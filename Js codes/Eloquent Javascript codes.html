@@ -113,7 +113,7 @@
                     }    
                         break;
             case 4://exercises
-                    let choice4 = eval(prompt("\tChoose the Exercise you want to view\n 1:Exercise 1 \n 2:Exercise 2 \n 3:Exercise 3\n 4:Exercise 4 \n 5:Exercise 5\n 6:Exercise 6 \n"));
+                    let choice4 = eval(prompt("\tChoose the Exercise you want to view\n 1:triangleLoop \n 2:fizzBuzz \n 3:chessBoard \n 4:minimum \n 5:recursion \n 6:Growing functions \n"));
                     switch(choice4){
                         case 1:
                             //input your code
@@ -131,8 +131,26 @@
                             minimum();
                             break;
                         case 5:
+                            recursion();
                             break;
                         case 6:
+                            case6 = eval(prompt("\tOpen your console to see results\n1:Count Bs\n2:Count Char\n"))
+                             switch(case6){
+                                 case 1:
+                                    beancount();
+                                 break;
+                                 case 2:
+                                     beancount2();
+                                 break;
+                                 default:
+                                    if (choice4 == null){
+                                    alert("you haven't keyed in any value");
+                                    }else{
+                                    alert("You've exeeceded the limit");
+                                    }
+                                    menu();
+                                    break;
+                             }
                              break; 
                         default:
                         if (choice4 == null){
@@ -342,22 +360,82 @@ function minimum(){
 alert("We are going to compare two numbers so  as to get the minimmum");
 x=eval(prompt("Enter a value x"));
 y=eval(prompt("Enter a value y"));
-document.write(Math.min(x,y));
+//document.write(Math.min(x,y)); //method 1
+if(x < y ){//method 2
+    document.write(x);
+}else{
+    document.write(y);
+}
   }
 //exercise recursion
 function recursion(){
 let x = eval(prompt("Enter a value"));
-    function div(x){
-if(x%2 == 0){
-Boolean 
-}if(x%2 ==1){
-Boolean 
+function isEven(x){//trial 2
+if(x == 0){
+    return("even");
+}if(x == 1){
+    return("odd");
 }else{
-    return div(x-2) 
+    if(x<0){//fixed the negative error by dividing the number by itself so that it can result to a positive.
+    x=(x/-1);
+    return isEven(x);
+    }else{
+   return isEven(x-2);
+    }
 }
     }
-} 
+    document.write(isEven(x));
+        } 
+//exercise beancount
+function beancount(){
+    function countBs(){
+let wordy= prompt('Enter a string with B');
+let count = 0;
+let x = 0;
+function div(x){
+let z = wordy.indexOf('B',x);
+    if(z >= 0){
+    x=z+1;
+    count = count + 1;
+    //console.log(z);
+    div(x);//recurssive function so as to find the total number of Bs
+    }else{
+        console.log("Computing,Waiting for results.");
+    }
+}
+setTimeout(function(){
+    console.log(`The number of b(s) in the text is ${count}`);
+},3000);
+div(x);
 
+}
+countBs();
+}
+function beancount2(){
+    function countChar(){
+let wordy= prompt('Enter a string ');
+let char =prompt("Enter one alphabetical character you want to count in the line/sentence");
+let count = 0;
+let x = 0;
+function div(x){
+let z = wordy.indexOf(char,x);
+    if(z >= 0){
+    x=z+1;
+    count = count + 1;
+    //console.log(z);
+    div(x);//recurssive function so as to find the total number of Bs
+    }else{
+        console.log("Computing,Waiting for results.");
+    }
+}
+setTimeout(function(){
+    console.log(`The number of ${char}(s) in the text is ${count}`);
+},3000);
+div(x);
+
+}
+countChar();
+}
 //body of the program
       menu();
 
