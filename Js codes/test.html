@@ -199,7 +199,27 @@ countChar();
  console.log(obj.right);
  obj.true ="true";
  console.log(obj.true);
- console.log(Object.keys(obj));//gets to see the properties within a particular objetc
+ console.log(Object.keys(obj));//gets to see the properties within a particular object
+ //copying data from one object to another.
+ let newObj ={
+     left:1,
+     right:2,
+ };
+ let objectC =obj;
+ /*let objectC ={
+     new:'tets',
+    };*///i want object C to have both the two objects in it.
+//Object.assign(objectC,obj,newObj);
+console.log(objectC);
+console.log(Object.keys(objectC));//new properties will be acquired by Object C.
+obj.left = 5;
+console.log(objectC);
+console.log(newObj);
+//const how it can be used under mutability.
+const score = {visitors: 0, home: 0};// This is okay
+score.visitors=2;
+console.log(score);//this is okay.
+
     </script>
 </body>
 </html>
