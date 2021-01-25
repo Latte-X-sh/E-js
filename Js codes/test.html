@@ -191,6 +191,7 @@ div(x);
 countChar();
  */
  //objects.
+ /*
  let obj={
      left:1,
      right: 2,
@@ -210,6 +211,7 @@ countChar();
      new:'tets',
     };*///i want object C to have both the two objects in it.
 //Object.assign(objectC,obj,newObj);
+/*
 console.log(objectC);
 console.log(Object.keys(objectC));//new properties will be acquired by Object C.
 obj.left = 5;
@@ -219,7 +221,51 @@ console.log(newObj);
 const score = {visitors: 0, home: 0};// This is okay
 score.visitors=2;
 console.log(score);//this is okay.
+console.log("coconut".indexOf("u",));
+*/
+//object exercises
+//1st iteration of the code
+/*
+let start=eval(prompt("Enter the starting point of your range "));
+let end = eval(prompt("Enter the end of your range"));
+function range(start,end){
+let numbers=[]//array for storing the numbers
+    for(let i = start;i <= end;i++){
+        numbers.push(i);
+    }
+ console.log(numbers);
+let count =0;
+//closure concept is important and scoping too.
+    function sum(){//sum for each array element
+        for(i = 0;i< numbers.length;i++){
+        count+=numbers[i];
+        }
+        return count;
+    }
+return sum();    
+}
+console.log(range(start,end));*/
+//2nd code iteration involves adding a 3rd parameter for the step in how values in the array are formed.
+let start=eval(prompt("Enter the starting point of your range "));
+let end = eval(prompt("Enter the end of your range"));
+function range(start,end){
+let numbers=[]//array for storing the numbers
+    for(let i = start;i <= end;i++){
+        numbers.push(i);
+    }
+ console.log(numbers);
+let count =0;
+//closure concept is important and scoping too.
+    function sum(){//sum for each array element
+        for(i = 0;i< numbers.length;i++){
+        count+=numbers[i];
+        }
+        return count;
+    }
+return sum();    
+}
+console.log(range(start,end));
 
-    </script>
+</script>
 </body>
 </html>
