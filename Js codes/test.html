@@ -248,21 +248,13 @@ console.log(range(start,end));*/
 //2nd code iteration involves adding a 3rd parameter for the step in how values in the array are formed.
 let start=eval(prompt("Enter the starting point of your range "));
 let end = eval(prompt("Enter the end of your range"));
+//let x =eval(prompt("Enter the range interval sequence of the array"));
 function range(start,end){
-let numbers=[]//array for storing the numbers
+let numbers=[];//array for storing the numbers
     for(let i = start;i <= end;i++){
         numbers.push(i);
     }
  console.log(numbers);
-let count =0;
-//closure concept is important and scoping too.
-    function sum(){//sum for each array element
-        for(i = 0;i< numbers.length;i++){
-        count+=numbers[i];
-        }
-        return count;
-    }
-return sum();    
 }
 console.log(range(start,end));
 
