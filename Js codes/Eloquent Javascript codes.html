@@ -113,7 +113,7 @@
                     }    
                         break;
             case 4://exercises
-                    let choice4 = eval(prompt("\tChoose the Exercise you want to view\n 1:triangleLoop \n 2:fizzBuzz \n 3:chessBoard \n 4:minimum \n 5:recursion \n 6:Growing functions \n 7:Sum of an Array\n"));
+                    let choice4 = eval(prompt("\tChoose the Exercise you want to view\n 1:triangleLoop \n 2:fizzBuzz \n 3:chessBoard \n 4:minimum \n 5:recursion \n 6:Growing functions \n 7:Sum of an Array\n 8:Reversing an Array \n"));
                     switch(choice4){
                         case 1:
                             //input your code
@@ -476,29 +476,36 @@ console.log(range(start,end,step));
 }
 //ext2(Reversing an Array)
 function reverse(){
+let x=eval(prompt("Enter the limit value you want your code to reach to"));
+let step =eval(prompt("Enter the interval range of your values"));
 function reverseArray(){
 let arr =[];
 let newArr=[];
 let count = 0;
-let x=eval(prompt("Enter the limit value you want your code to reach to"));
-let step =eval(prompt("Enter the interval range of your values"));
 for (let a = 0;a <= x;a +=step){
     arr.push(a);//we have random numbers based on the variables set.
 }
+//now we want to reverse the process
 for(let z = 0 ; z < arr.length; z++){
     //declare a new array to store all this
    count +=1;
    newArr.push(arr[arr.length - count]);
   
 }
-console.log(newArr);
-
-//now we want to reverse the process
+console.log(newArr,"New array was created to display this inverse");
 }
 //part2 of the code
-
+function reverseArrayInPlace(){
+//same array modifying and not using another new array to print the opposite
+let newArray=[];
+for(let q=0 ; q<x;q+=step){
+ newArray.unshift(q);
+} 
+console.log(newArray,"Use of unshift method to produce the same result");
+}
 //results
 reverseArray();
+reverseArrayInPlace();
 
 }
 //body of the program
