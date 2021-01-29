@@ -246,7 +246,7 @@ return sum();
 }
 console.log(range(start,end));*/
 //2nd code iteration involves adding a 3rd parameter for the step in how values in the array are formed.
-let start=eval(prompt("Enter the starting point of your range "));
+/*let start=eval(prompt("Enter the starting point of your range "));
 let end = eval(prompt("Enter the end of your range"));
 let step = eval(prompt("Enter the interval you want your array to appear"));
 //let x =eval(prompt("Enter the range interval sequence of the array"));
@@ -273,7 +273,28 @@ console.log(numbers);
 return `The sum of the above array is ${sum()}`;
 }
 console.log(range(start,end,step));
+*/
+//reversing an array
+function reverseArray(){
+let arr =[];
+let newArr=[];
+let count = 0;
+let x=eval(prompt("Enter the limit value you want your code to reach to"));
+let step =eval(prompt("Enter the interval range of your values"));
+for (let a = 0;a <= x;a +=step){
+    arr.push(a);//we have random numbers based on the variables set.
+}
+for(let z = 0 ; z < arr.length; z++){
+    //declare a new array to store all this
+   count +=1;
+   newArr.push(arr[arr.length - count]);
+  
+}
+console.log(newArr);
 
+//now we want to reverse the process
+}
+reverseArray();
 </script>
 </body>
 </html>
