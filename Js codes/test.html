@@ -314,7 +314,37 @@ for(let n =0; n<10;n++){
     newArr.push(n)
 }
 console.log(newArr.reverse());*/
-//new code
+//creating a list using objects.
+//1st try
+/*function arrayToList(){
+let x = eval(prompt("Enter how many lists you want."));
+let list={
+    a:0,
+    };
+let rest = {
+    a:1,
+    };
+
+if(x == 0){
+console.log(list);
+}if(x == 1 ){
+list.b = rest;
+console.log(list);
+}
+else{
+for(n=2;n <= x; n++){
+let other={};
+Object.assign(other,rest);
+list.b = rest;
+rest.b =other;
+other.a = x;
+console.log(list);
+    }
+
+}
+}
+arrayToList();*//
+//2nd try
 
 </script>
 </body>
