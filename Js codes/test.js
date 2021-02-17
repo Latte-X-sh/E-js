@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>code test</title>
-</head>
-<body>
-    <script>
-
 //function1();
 //let x = eval(prompt("Enter a number"))
 /*
@@ -361,7 +351,7 @@ console.log(node);*/
 //2nd try using for loop
 //declare a global object
 /*let x ;
-let y =eval(prompt("Enter the range of your list"));
+let y =3;
 let node;//new object instance
 let list={
     number:x,
@@ -376,28 +366,17 @@ for(let z = 0;z < y; z++){
     list.rest = node;
 }
 console.log(list);*/
-/*var count = 0;
-
-function cc(card) {
-  // Only change code below this line
-  var regex = /[JQKA]/;
-  if (card > 1 && card < 7) {
-    count++;
-  } else if (card === 10 || regex.test(card)) {
-    count--;
-  }
-
-  if (count > 0) return count + " Bet";
-  return count + " Hold";
-
-  // Only change code above this line
-}*/
+let x =("12 12 23 23 43");
+let y = [];
+for(let a = 0 ; a<x.length;x++){
+   
+    if(x[x] == " "){
+        y.push(0);
+    }else{
+    let z =eval(x[x]);
+    y.push(z);
+    }
+}
+console.log(y);
 
 
-//console.log(cc(2), cc(2), cc(10));
-let x =("12 12 232 343 ");
-eval(x);
-console.log(x); 
-</script>
-</body>
-</html>
